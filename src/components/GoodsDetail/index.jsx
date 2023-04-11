@@ -71,7 +71,7 @@ function GoodsDetail({ good }) {
                                 <p className={styles.qty}>
                                     總金額：￥{good.price * qty}
                                 </p>
-                                <AddToCart />
+                                <AddToCart good={good} qty={qty}/>
                             </div>
                         </div>
                     </div>
