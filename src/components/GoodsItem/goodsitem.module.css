@@ -5,7 +5,27 @@
 
  .Info {
     margin-top: 3%;
-    color: #444;
+    color: #444444;
     font-family: 'Yomogi';
+    font-weight: bold;
     position: relative;
+ }
+
+ .title {
+   font-size: 24px;
+ }
+
+ .category {
+   font-family: 'Alumni Sans';
+   font-size: 18px;
+   background-color: #444444;
+   color: #b1b1b1;
+ }
+
+ .seller {
+    font-size: 18px;
+ }
+
+ .price {
+   font-size: 18px;
  }

@@ -20,8 +20,7 @@ export default function StoreContent({goods}) {
                         key={good.id}
                         sm={{ span: 12 }} 
                         lg={{ span: 8 }}
-                        xl={{ span: 6 }}
-                        xxl={{ span: 4 }}
+                        xxl={{ span: 6 }}
                     >
                         <GoodsItem good={good} />
                     </Col>

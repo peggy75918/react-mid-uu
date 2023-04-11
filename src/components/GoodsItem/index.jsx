@@ -14,7 +14,7 @@ export default function GoodsItem({ good }) {
             </Link>
             <Link to={`/id/${good.id}`}>
                 <div className={styles.Info}>
-                    <p className={styles.Title}>
+                    <p className={styles.title}>
                         {good.title}
                     </p>
                     <p className={styles.category}>
@@ -23,7 +23,7 @@ export default function GoodsItem({ good }) {
                     <p className={styles.seller}>
                         {good.seller}
                     </p>
-                    <span>￥{good.price}</span>
+                    <span className={styles.price}>￥{good.price}</span>
                 </div>
             </Link>
             {/* <Link to="/ " target="_blank">
