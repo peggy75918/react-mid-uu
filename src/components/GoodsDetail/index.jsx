@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowLeftOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Select } from "antd";
+import { Link } from "react-router-dom"
 import AddToCart from "../AddToCart"
 import styles from "./goodsdetail.module.css"
 const { Option } = Select;
@@ -13,9 +14,13 @@ function GoodsDetail({ good }) {
         <p className={styles.big_title}>STORE</p>
         <p className={styles.decoline}>—————————————— ᗦ↞◃ ——————————————</p>
         <div className={styles.icon}>
-             <ArrowLeftOutlined 
+            <Link to={`/Store`}className={styles.menu_item}>
+                <ArrowLeftOutlined 
                 style={{ fontSize: '48px', color: '#B1B1B1' }}
-            /> 
+
+                    /> 
+            </Link>
+             
             {/* <div className={styles.count}>
                 <p className={styles.count_text}>商品數：　件　合計：￥　</p>
                 <div className={styles.count_icon}>
