@@ -1,0 +1,11 @@
+.item {
+    background-color: #B1B1B1;
+    padding: 2%;
+ }
+
+ .Info {
+    margin-top: 3%;
+    color: #444;
+    font-family: 'Yomogi';
+    position: relative;
+ }
