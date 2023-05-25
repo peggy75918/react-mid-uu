@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { ShoppingOutlined } from '@ant-design/icons';
 import styles from './cartsummary.module.css';
 import { selectCartItems } from "../../redux/cartSlice";
+import { Modal } from "antd";
+import CartModal from "../CartModal";
 
 export default function CartSummary() {
     const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +28,12 @@ export default function CartSummary() {
                     />
                 </div>
             </div>
+            <CartModal 
+                isOpen={isOpen}
+            />
+            
         </nav>
+        
         
     );
 }

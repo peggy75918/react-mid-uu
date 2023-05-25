@@ -9,9 +9,15 @@ export default function StoreContent({goods}) {
             <p className={styles.big_title}>STORE</p>
             <p className={styles.decoline}>—————————————— ᗦ↞◃ ——————————————</p>
             <div className={styles.btm_area}>
-                <div className={styles.btm}>All</div>
-                <div className={styles.btm2}>Album</div>
-                <div className={styles.btm2}>Merchandise</div>
+                <div className={styles.btm}>
+                    <a>All</a>
+                </div>
+                <div className={styles.btm2}>
+                    <a>Album</a>
+                </div>
+                <div className={styles.btm2}>
+                    <a>Merchandise</a>
+                </div>
             </div>
             <div className={styles.goods}>
                 <Row gutter={[24,24]}>

@@ -8,11 +8,15 @@ export default function VideoContent() {
             <p className={styles.big_title}>VIDEO</p>
             <p className={styles.decoline}>—————————————— ᗦ↞◃ ——————————————</p>
             <div className={styles.btm_area}>
-                <div className={styles.btm}>All</div>
-
-                <div className={styles.btm2}>Work</div>
-
-                <div className={styles.btm2}>Cooperation</div>
+                <div className={styles.btm}>
+                    <a>All</a>
+                </div>
+                <div className={styles.btm2}>
+                    <a>Work</a>
+                </div>
+                <div className={styles.btm2}>
+                    <a>Cooperation</a>
+                </div>
             </div>
             <div>
                 <Row gutter={[24, 24]}>
