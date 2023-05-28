@@ -1,3 +1,7 @@
+.cartSummary {
+   width: 400px;
+}
+
 .count {
     display: flex;
     height: 50px;
@@ -17,6 +21,7 @@
     height: 50px;
     width: 50px;
     background-color: #B1B1B1;
+    border: transparent;
  }
 
  .count_cart {

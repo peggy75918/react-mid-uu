@@ -1,7 +1,8 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
 import NewsContent from "../components/NewsContent";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 function News() {
+
     return (
         <div className="mainLayout">
             <Header className="layoutHeader" />

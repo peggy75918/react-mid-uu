@@ -8,8 +8,14 @@
     font-size: 24px;
 }
 
+.nav{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .btm_area {
-    margin: 0% 10% 2% 10%;
     display: flex;
     justify-content: flex-start;
 }
@@ -58,7 +64,12 @@
     color: #b1b1b1;
 }
 
+.cart {
+    display: flex;
+}
+
 .goods{
+    margin-top: 10px;
     padding-left: 10%;
     padding-right: 10%;
 }

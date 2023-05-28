@@ -1,4 +1,3 @@
-import CartSummary from "../CartSummary";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom"
 export default function Header() {
@@ -16,7 +15,9 @@ export default function Header() {
                         <Link to={`/Store`} className={styles.menu_item}>STORE</Link>
                         <Link to={`/Team`} className={styles.menu_item_right}>TEAM</Link>
                     </div>
-                    <CartSummary />
+                </div>
+                <div className={styles.user}>
+
                 </div>
                 
             </div>

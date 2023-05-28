@@ -11,7 +11,7 @@ function Goods() {
    );
 
    return (
-      <div >
+      <div className="mainLayout">
          <Header className="layoutHeader" />
          <GoodsDetail good={good} className="layoutContent" />
          <Footer className="layoutFooter" />

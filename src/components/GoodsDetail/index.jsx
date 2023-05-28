@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ArrowLeftOutlined, ShoppingOutlined } from '@ant-design/icons';
-import { Select } from "antd";
+import { Select ,Button} from "antd";
 import { Link } from "react-router-dom"
 import AddToCart from "../AddToCart"
+import CartSummary from "../CartSummary";
 import styles from "./goodsdetail.module.css"
 const { Option } = Select;
 
@@ -20,17 +21,9 @@ function GoodsDetail({ good }) {
 
                     /> 
             </Link>
-             
-            {/* <div className={styles.count}>
-                <p className={styles.count_text}>商品數：　件　合計：￥　</p>
-                <div className={styles.count_icon}>
-                   <ShoppingOutlined 
-                    style={{ fontSize: '40px', color: '#444444' }}
-                    className={styles.count_cart}
-                    />
-                </div>
-            </div> */}
-            
+            <div className={styles.cart}>
+                    <CartSummary />
+            </div>
         </div>
         
         <div className={styles.container}>
@@ -60,6 +53,7 @@ function GoodsDetail({ good }) {
                                 </p>
                                 <div className={styles.qty}>
                                     數量：{"   "}
+                                    {good.countInStock > 0 ? 
                                     <Select
                                         defaultValue={qty}
                                         key={qty}                          
@@ -72,8 +66,13 @@ function GoodsDetail({ good }) {
                                         </Option>
                                         ))}
                                     </Select>
+                                    : <Button type="primary" className={styles.btn}>
+                                        有庫存通知我
+                                  </Button>
+                                    }
+                                    
                                 </div>
-                                <p className={styles.qty}>
+                                <p className={styles.tatol}>
                                     總金額：￥{good.price * qty}
                                 </p>
                                 <AddToCart good={good} qty={qty}/>
