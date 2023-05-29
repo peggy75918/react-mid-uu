@@ -1,14 +1,36 @@
 import React from 'react';
-import { Menu, Form } from 'semantic-ui-react';
 import styles from "./signinsignup.module.css";
 import { CloseOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Form, Input, Button, Checkbox } from 'antd';
+import 'firebase/compat/auth';
+import firebase from '../../api/index';
+
+
 
 export default function Signin ({ closeModal }) {
+    const history =useNavigate();
     const [activeItem, setActiveItem] =React.useState('signin');
-    const [email,setEmail] = React.useState(' ');
-    const [password,setPassword] = React.useState(' ');
-    const [username,setUsername] = React.useState(' ');
+    const [email,setEmail] = React.useState('');
+    const [password,setPassword] = React.useState('');
+
+    function onSubmit(){
+        if(activeItem==='signup'){
+            firebase
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .then(()=>{
+                history('/');closeModal(false);
+            });
+        } else if(activeItem==='signin'){
+            firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(()=>{
+                history('/');closeModal(false);
+            });
+        }
+    }
 
     return(
         <div className={styles.container}>
@@ -47,39 +69,44 @@ export default function Signin ({ closeModal }) {
                         {activeItem === 'signup' &&<div className={styles.line}></div>}
                     </div>
                 </div>
-                <div className={styles.from}>
-                    <label >
-                        <input 
+                <Form 
+                    className={styles.from} 
+                    onFinish={onSubmit} 
+                >
+                    <Form.Item >
+                        <Input 
                             name="useremail" 
                             value={email} 
                             onChange={(e)=>setEmail(e.target.value)} 
                             placeholder="Useremail" 
                             className={styles.input1}
+                            bordered={false} 
                         />
-                    </label>
-                    <label >
-                        <input 
+                    </Form.Item>
+                    <Form.Item >
+                        <Input 
                             name="password"
                             value={password}
                             onChange={(e)=>setPassword(e.target.value)}
                             placeholder="Password" 
                             className={styles.input2}
                             type="password" 
+                            bordered={false} 
                         />
-                    </label>
-                    <label className={styles.check}>
-                        {activeItem === 'signin' && <div><input type="checkbox" name="staySignin" className={styles.checkbox} /> stay signed in</div>}
-                        {activeItem === 'signup' && <div><input name="username" placeholder="Username" className={styles.input3}/></div>}
-                    </label>
-                    <button className={styles.signbtn}>
+                    </Form.Item>
+                    <Form.Item className={styles.check}>
+                        {activeItem === 'signin' && <div className={styles.checkbox}><Checkbox type="checkbox" name="staySignin" />  stay signed in</div>}
+                        {activeItem === 'signup' && <div className={styles.space}></div>}
+                    </Form.Item>
+                    <Button className={styles.signbtn} htmlType="submit" type="text">
                         {activeItem === 'signin' && 'SIGN IN'}
                         {activeItem === 'signup' && 'SIGN UP'}
-                    </button>
-                    <div className={styles.btmword}>
-                        {activeItem === 'signin' && 'Forgot Password?'}
-                        {activeItem === 'signup' && <div className={styles.btmword2}><p>Already have an account?</p> <button className={styles.btmbtn} onClick={()=>setActiveItem ('signin')}>SIGN IN</button></div>}
-                    </div>
-                </div>
+                    </Button>
+                    <Form.Item className={styles.btmword}>
+                        {activeItem === 'signin' && <div className={styles.btmword}>Forgot Password?</div>}
+                        {activeItem === 'signup' && <div className={styles.btmcontent}><p className={styles.btmword}>Already have an account?</p> <button className={styles.btmbtn} onClick={()=>setActiveItem ('signin')}>SIGN IN</button></div>}
+                    </Form.Item>
+                </Form>
             </div>
             
         </div>

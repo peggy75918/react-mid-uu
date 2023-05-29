@@ -18,7 +18,7 @@ export default function AddToCart({ good, qty }) {
   };
 
   return (
-    <Button type="primary" className={styles.btn} onClick={addToCart}>
+    <Button type="text" className={styles.btn} onClick={addToCart}>
       加入購物車
     </Button>
   );

@@ -78,8 +78,8 @@
 }
 
 .from {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 12%;
+    margin-right: 12%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -97,10 +97,18 @@
     padding-left: 5%;
 }
 
+.input1:hover {
+    border: solid 3px #444444;
+}
+
+.input1:focus {
+    border: solid 3px #444444;
+}
+
 .input2 {
     width: 450px;
     height: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: transparent;
     border: solid 2px #444444;
     font-family: 'Alumni Sans';
@@ -109,30 +117,27 @@
     padding-left: 5%;
 }
 
-.input3 {
-    width: 450px;
-    height: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: solid 2px #444444;
-    font-family: 'Alumni Sans';
-    font-size: 32px;
-    border-radius: 5px;
-    padding-left: 5%;
+.input2:hover {
+    border: solid 3px #444444;
 }
 
-.check {
+.input2:focus {
+    border: solid 3px #444444;
+}
+
+.checkbox {
     font-family: 'Alumni Sans';
-    margin-top: 20px;
-    color: #444444;
     font-size: 24px;
+}
+
+.space {
+    margin-top: 38px;
 }
 
 .signbtn {
     width: 450px;
     height: 60px;
-    margin-top: 20px;
+    
     background-color: #444444;
     border: solid 2px #444444;
     font-family: 'Alumni Sans';
@@ -147,13 +152,13 @@
 
 .btmword {
     font-family: 'Alumni Sans';
-    margin-top: 20px;
+    margin-top: 5px;
     color: #444444;
     font-size: 24px;
     align-self: center;
 }
 
-.btmword2 {
+.btmcontent{
     display: flex;
     flex-direction: row;
     align-items: self-start;
@@ -165,5 +170,8 @@
     border: transparent;
     color: #444444;
     border-bottom: solid 1px#444444;
+    font-family: 'Alumni Sans';
+    font-size: 24px;
     margin-left: 5px;
+    margin-top: 4px;
 }
