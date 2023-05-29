@@ -1,8 +1,9 @@
 import './App.css'
 import Scrolltop from "./components/Scrolltop"
 import 'bootstrap/dist/css/bootstrap.css';
+//import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import 'antd/dist/reset.css';
+//import 'antd/dist/reset.css';
 import React, { useState, useEffect, getRandomQuote } from 'react';
 import { Provider } from "react-redux";
 import store from './redux/store';
