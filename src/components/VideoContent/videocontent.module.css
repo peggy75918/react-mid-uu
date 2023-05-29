@@ -8,6 +8,19 @@
     font-size: 24px;
 }
 
+@media (max-width: 400px) {
+    .big_title {
+        font-size: 64px;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    .decoline {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4px;
+    }
+}
+
 .btm_area {
     margin: 0% 10% 2% 10%;
     display: flex;
@@ -58,6 +71,16 @@
     color: #b1b1b1;
 }
 
+@media (max-width: 400px) {
+    .btm{
+        font-size: 24px;
+    }
+    .btm2{
+        font-size: 24px;
+        margin: 0% 3%;
+    }
+}
+
 .img_area {
     display: flex;
     margin: 3% 12.5% 3% 12.5%;
@@ -80,6 +103,13 @@
     z-index: 5;
     /* -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7)); */
     filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5))
+}
+
+@media (max-width: 400px) {
+    .playbtm {
+        right: 16%;
+        bottom: 33%;
+    }
 }
 
 .img_name{

@@ -43,7 +43,7 @@ export default function Content() {
                     <div className={styles.date_bg}>
                         <h6 className={styles.date}>2023.03.30</h6>
                     </div>
-                    <a href="https://twitter.com/uutubo/status/1641749678281687041" className={styles.news_text1} target="_blank">將於明日3/31(五)19:30先行公開2nd album『回送行き』試聽動畫。<ArrowReturnRight /></a>
+                    <a href="https://twitter.com/uutubo/status/1641749678281687041" className={styles.news_text1} target="_blank">將於明日3/31(五)19:30先行公開2nd album『回送行き』試聽動畫。<ArrowReturnRight className={styles.arrow} /></a>
                 </div>
                 <div className={styles.text_area}>
                     <div className={styles.date_bg}>
@@ -72,9 +72,9 @@ export default function Content() {
                 </div>
                 <div className={styles.home_video}>
 
-                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/MwdD28EE580" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/hIi2N15UuIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/NwxHuGiWoz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/MwdD28EE580" title="YouTube video player" className={styles.video_viewer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/hIi2N15UuIU" title="YouTube video player" className={styles.video_viewer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="30%" height="180" src="https://www.youtube.com/embed/NwxHuGiWoz0" title="YouTube video player" className={styles.video_viewer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
             <div id="store">

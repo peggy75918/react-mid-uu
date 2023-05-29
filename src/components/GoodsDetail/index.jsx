@@ -18,7 +18,7 @@ function GoodsDetail({ good }) {
             <Link to={`/Store`}className={styles.menu_item}>
                 <ArrowLeftOutlined 
                 style={{ fontSize: '48px', color: '#B1B1B1' }}
-
+                className={styles.arrow}
                     /> 
             </Link>
             <div className={styles.cart}>

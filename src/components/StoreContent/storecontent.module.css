@@ -8,11 +8,35 @@
     font-size: 24px;
 }
 
+@media (max-width: 400px) {
+    .big_title {
+        font-size: 64px;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    .decoline {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4px;
+    }
+}
+
 .nav{
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 400px) {
+    .nav{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .btm_area {
+        margin-bottom: 10px;
+    }
 }
 
 .btm_area {
@@ -62,6 +86,16 @@
     background-color: #777777;
     border: 2px solid #b1b1b1;
     color: #b1b1b1;
+}
+
+@media (max-width: 400px) {
+    .btm{
+        font-size: 24px;
+    }
+    .btm2{
+        font-size: 24px;
+        margin: 0% 3%;
+    }
 }
 
 .cart {

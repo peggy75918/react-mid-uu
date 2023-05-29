@@ -8,7 +8,8 @@ export default function StoreContent({goods}) {
     return (
         <div>
             <p className={styles.big_title}>STORE</p>
-            <p className={styles.decoline}>—————————————— ᗦ↞◃ ——————————————</p>
+            <p className={styles.decoline}>
+                —————————————— ᗦ↞◃ ——————————————</p>
             <div className={styles.nav}>
                 <div className={styles.btm_area}>
                     <div className={styles.btm}>

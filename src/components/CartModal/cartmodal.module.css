@@ -16,6 +16,17 @@
     z-index: 50;
 }
 
+@media (max-width: 400px) {
+    .modal {
+        width: 324px;
+    }
+
+    .btn {
+        margin-left: 65% !important;
+    }
+    
+}
+
 .btn {
     margin-top: 10px;
     margin-bottom: 15px;
@@ -39,6 +50,7 @@
   }
 
 .box1 {
+    font-family: 'Yomogi';
     margin: auto;
     width: 98%;
     height: 50px;

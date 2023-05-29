@@ -11,3 +11,14 @@
     padding-top: 2vw;
     height: 5vw;
   }
+
+  @media (max-width: 400px) {
+    .footer_text{
+      padding-top: 3vw;
+      height: 10vw;
+    }
+    .footer {
+      display: flex;
+      width: 400px;
+    }
+  }

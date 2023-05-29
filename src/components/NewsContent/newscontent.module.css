@@ -12,6 +12,20 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
 }
+
+@media (max-width: 400px) {
+    .big_title {
+        font-size: 64px;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    .decoline {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4px;
+    }
+}
+
 .btm_area{
     margin: 0% 10% 2% 10%;
     display: flex;
@@ -100,8 +114,22 @@ a {
     border-bottom: solid;
     text-align: start;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
+
+@media (max-width: 400px) {
+    .news_text {
+        border-bottom: solid 2px #b1b1b1;
+        padding-bottom: 8px;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+
 .numbtm{
     border-style: none;
     background-color: transparent;
@@ -110,8 +138,19 @@ a {
     margin: 1% 1%;
 }
 
+
 .twitter {
     margin: 5% 12%;
     display: flex;
     justify-content: space-between
+}
+
+@media (max-width:400px) {
+    .twitter {
+        width: 80%;
+        flex-direction: column;
+    }
+    .twitterarea{
+        margin-bottom: 120%;
+    }
 }
