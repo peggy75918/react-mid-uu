@@ -68,7 +68,20 @@ export default function NewsContent() {
             </div>
             <button className={styles.numbtm}>1</button>
             <button className={styles.numbtm}>2</button>
-            
+            {/*<div className={styles.twitter}>
+                <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="uutubo"
+                    options={{ height: 600, width: 450, }}
+                    theme="dark"
+                />
+                <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="akisute0701"
+                    options={{ height: 600, width: 450, }}
+                    theme="dark"
+                />
+            </div>*/}
         </div>
     );
 }
