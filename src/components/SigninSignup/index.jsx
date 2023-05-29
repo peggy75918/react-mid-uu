@@ -9,7 +9,7 @@ export default function Signin ({ closeModal }) {
 
     return(
         <div className={styles.container}>
-            <div className={styles.mask}>
+            <div className={styles.mask} onClick={()=>closeModal(false)}>
             </div>
             <div className={styles.box}>
                 <div className={styles.titlebox}>

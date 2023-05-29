@@ -18,13 +18,12 @@
  }
 
  .count_icon {
-    height: 50px;
+    height: 49px;
     width: 50px;
     background-color: #B1B1B1;
     border: transparent;
  }
 
  .count_cart {
-    padding-top: 3px;
     background-color: #B1B1B1;
  }

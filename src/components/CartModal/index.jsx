@@ -14,7 +14,8 @@ export default function CartModal ({ closeModal }) {
     
     return (
         <>
-           
+        <div className={styles.mask} onClick={()=>closeModal(false)}>
+        </div>   
         <div className={styles.modal} >
             <div className={styles.container}>
                 {cartItems.length === 0 ? (

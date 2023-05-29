@@ -1,9 +1,19 @@
+.mask {
+    background-color: transparent;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 20;
+}
 .modal {
     width: 400px;
     background-color: #444444;
     border: solid #B1B1B1 1px;
     position: absolute;
-    z-index: 1;
+    z-index: 50;
 }
 
 .btn {
