@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./signinsignup.module.css";
-import { CloseOutlined } from '@ant-design/icons';
+import { CloseOutlined, ExclamationCircleFilled } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';
 import { Form, Input, Button, Checkbox } from 'antd';
 import 'firebase/compat/auth';
@@ -13,6 +13,7 @@ export default function Signin ({ closeModal }) {
     const [activeItem, setActiveItem] =React.useState('signin');
     const [email,setEmail] = React.useState('');
     const [password,setPassword] = React.useState('');
+    const [errorMessage,setErrorMessage] = React.useState('');
 
     function onSubmit(){
         if(activeItem==='signup'){
@@ -21,6 +22,20 @@ export default function Signin ({ closeModal }) {
             .createUserWithEmailAndPassword(email, password)
             .then(()=>{
                 history('/');closeModal(false);
+            })
+            .catch((error) =>{
+                switch(error.code){
+                    case 'auth/email-already-in-use':
+                        setErrorMessage('信箱已存在');
+                        break;
+                    case 'auth/invalid-email':
+                        setErrorMessage('信箱格式不正確');
+                        break;
+                    case 'auth/weak-password':
+                        setErrorMessage('密碼強度不足');
+                        break;
+                    default:
+                }
             });
         } else if(activeItem==='signin'){
             firebase
@@ -28,6 +43,20 @@ export default function Signin ({ closeModal }) {
             .signInWithEmailAndPassword(email, password)
             .then(()=>{
                 history('/');closeModal(false);
+            })
+            .catch((error) =>{
+                switch(error.code){
+                    case 'auth/invalid-email':
+                        setErrorMessage('信箱格式不正確');
+                        break;
+                    case 'auth/user-not-found':
+                        setErrorMessage('信箱不存在');
+                        break;
+                    case 'auth/wrong-password':
+                        setErrorMessage('密碼錯誤');
+                        break;
+                    default:
+                }
             });
         }
     }
@@ -52,7 +81,10 @@ export default function Signin ({ closeModal }) {
                         <button    
                             className={styles.signin}
                             active={activeItem === 'signin' } 
-                            onClick={()=>setActiveItem ('signin')}
+                            onClick={()=>{
+                                setErrorMessage('');
+                                setActiveItem ('signin')
+                            }}
                         >
                             SIGN IN
                         </button>
@@ -62,7 +94,10 @@ export default function Signin ({ closeModal }) {
                         <button    
                             className={styles.signup}
                             active={activeItem === 'signup' } 
-                            onClick={()=>setActiveItem ('signup')}
+                            onClick={()=>{
+                                setErrorMessage('');
+                                setActiveItem ('signup')
+                            }}
                         >
                             SIGN UP
                         </button>
@@ -94,6 +129,7 @@ export default function Signin ({ closeModal }) {
                             bordered={false} 
                         />
                     </Form.Item>
+                    {errorMessage && <div className={styles.error}><ExclamationCircleFilled style={{ fontSize: '15px', color: '#444444' ,}} className={styles.notifyicon}/> {errorMessage}</div>}
                     <Form.Item className={styles.check}>
                         {activeItem === 'signin' && <div className={styles.checkbox}><Checkbox type="checkbox" name="staySignin" />  stay signed in</div>}
                         {activeItem === 'signup' && <div className={styles.space}></div>}

@@ -125,6 +125,20 @@
     border: solid 3px #444444;
 }
 
+.error {
+    margin-top: -15px;
+    padding-left: 5px;
+    font-family: 'Yomogi';
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.notifyicon{
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
 .checkbox {
     font-family: 'Alumni Sans';
     font-size: 24px;
