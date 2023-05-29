@@ -5,7 +5,10 @@ import { CloseOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 export default function Signin ({ closeModal }) {
-    const [activeItem, setActiveItem] =React.useState('signin')
+    const [activeItem, setActiveItem] =React.useState('signin');
+    const [email,setEmail] = React.useState(' ');
+    const [password,setPassword] = React.useState(' ');
+    const [username,setUsername] = React.useState(' ');
 
     return(
         <div className={styles.container}>
@@ -23,28 +26,46 @@ export default function Signin ({ closeModal }) {
                 </div>
 
                 <div className={styles.menu}>
-                    <button    
-                        className={styles.signin}
-                        active={activeItem === 'signin' } 
-                        onClick={()=>setActiveItem ('signin')}
-                    >
-                        SIGN IN
-                    </button>
-                    <button    
-                        className={styles.signup}
-                        active={activeItem === 'signup' } 
-                        onClick={()=>setActiveItem ('signup')}
-                    >
-                        SIGN UP
-                    </button>
-
+                    <div>
+                        <button    
+                            className={styles.signin}
+                            active={activeItem === 'signin' } 
+                            onClick={()=>setActiveItem ('signin')}
+                        >
+                            SIGN IN
+                        </button>
+                        {activeItem === 'signin' &&<div className={styles.line}></div>}
+                    </div>
+                    <div>
+                        <button    
+                            className={styles.signup}
+                            active={activeItem === 'signup' } 
+                            onClick={()=>setActiveItem ('signup')}
+                        >
+                            SIGN UP
+                        </button>
+                        {activeItem === 'signup' &&<div className={styles.line}></div>}
+                    </div>
                 </div>
                 <div className={styles.from}>
                     <label >
-                        <input name="useremail" placeholder="Useremail" className={styles.input1}/>
+                        <input 
+                            name="useremail" 
+                            value={email} 
+                            onChange={(e)=>setEmail(e.target.value)} 
+                            placeholder="Useremail" 
+                            className={styles.input1}
+                        />
                     </label>
                     <label >
-                        <input name="password" placeholder="Password" className={styles.input2}/>
+                        <input 
+                            name="password"
+                            value={password}
+                            onChange={(e)=>setPassword(e.target.value)}
+                            placeholder="Password" 
+                            className={styles.input2}
+                            type="password" 
+                        />
                     </label>
                     <label className={styles.check}>
                         {activeItem === 'signin' && <div><input type="checkbox" name="staySignin" className={styles.checkbox} /> stay signed in</div>}
