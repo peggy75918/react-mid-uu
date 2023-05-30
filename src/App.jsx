@@ -11,9 +11,11 @@ import store from './redux/store';
 import Home from './pages/Home'
 import News from './pages/News';
 import Video from './pages/Video';
+import Video2 from './pages/Video2';
 import Store from './pages/Store';
 import Goods from './pages/Goods';
 import Team from './pages/Team';
+import User from './pages/User';
 
 
 function App() {
@@ -41,9 +43,11 @@ function App() {
               <Route path="Home" element={<Home />} />
               <Route path="News" element={<News />} />
               <Route path="Video" element={<Video />} />
+              <Route path="Video2" element={<Video2 />} />
               <Route path="Store" element={<Store />} />
               <Route path="id/:goodId" element={<Goods />} />
               <Route path="Team" element={<Team />} />
+              <Route path="User" element={<User />} />
             </Routes>
             <Scrolltop />
           </BrowserRouter>

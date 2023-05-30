@@ -42,7 +42,7 @@ export default function Header() {
                 {user ? (
                     <div className={styles.user1} 
                     
-                    >
+                    >   
                         <UserOutlined 
                             style={{ fontSize: '36px', color: '#b1b1b1' }}
                             className={styles.signin_icon}

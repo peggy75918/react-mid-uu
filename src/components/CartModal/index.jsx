@@ -54,6 +54,7 @@ export default function CartModal ({ closeModal }) {
                                     ))}
                                     </Select>
                                     </div>
+                                    <div className={styles.count}>￥{item.price}</div>
                                 </div>
                             </div>
                             

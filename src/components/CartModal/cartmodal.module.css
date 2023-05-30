@@ -96,6 +96,11 @@
 
 .title {
     font-family: 'Yomogi';
+    margin-bottom: 3px;
+}
+
+.count {
+    font-family: 'Yomogi';
 }
 
 .closebtn {
