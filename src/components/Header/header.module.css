@@ -72,10 +72,13 @@ a:hover {
 .signout {
   height: 50px;
   padding-top: 8px;
+  margin-left: 5px;
 }
 
 .signout_text {
+  width: 50px;
   font-family: 'Alumni Sans';
+  font-size: 16px;
 }
 
 .user2 {

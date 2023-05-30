@@ -40,13 +40,17 @@ function GoodsDetail({ good }) {
                         </div> */}
 
                         <div className={styles.info}>
-                            <div>
-                                <p className={styles.title}>{good.title}</p>
-                                <p className={styles.seller}>{good.seller}</p>
-                                <p className={styles.category}>{good.category}</p>
-                                <hr style={{color: '#444444'}}/>
+                            <div className={styles.box1}>
+                                <div className={styles.leftbox}>
+                                    <p className={styles.title}>{good.title}</p>
+                                    <p className={styles.seller}>/{good.seller}</p>
+                                </div>
+                                <div className={styles.rightbox}>
+                                    <p className={styles.category}>{good.category}</p>
+                                </div>
+                                
                             </div>
-                            <div>
+                            <div className={styles.box2}>
                                 <p className={styles.price}>￥{good.price}</p>
                                 <p className={styles.status}>
                                     庫存狀態：{good.countInStock > 0 ? "尚有庫存" : "暫無庫存"}
@@ -66,7 +70,7 @@ function GoodsDetail({ good }) {
                                         </Option>
                                         ))}
                                     </Select>
-                                    : <Button type="primary" className={styles.btn}>
+                                    : <Button type="text" className={styles.btn}>
                                         有庫存通知我
                                   </Button>
                                     }
@@ -77,9 +81,24 @@ function GoodsDetail({ good }) {
                                 </p>
                                 <AddToCart good={good} qty={qty}/>
                             </div>
+                            
                         </div>
                     </div>
-                    
+                    <div className={styles.detail}>
+                        <div className={styles.detail1}>
+                            商品介紹
+                            <div className={styles.des1}>
+                            {good.description1}
+                            </div>
+                        </div>
+                        <div className={styles.detail2}>
+                            商品資料
+                            <div className={styles.des2}>
+                            {good.description2}
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
 
             </div>
