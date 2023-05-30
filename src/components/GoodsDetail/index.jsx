@@ -97,6 +97,12 @@ function GoodsDetail({ good }) {
                             {good.description2}
                             </div>
                         </div>
+                        <div className={styles.detail3}>
+                            相似商品
+                            <div className={styles.des3}>
+                            
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
