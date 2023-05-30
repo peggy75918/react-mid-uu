@@ -69,6 +69,7 @@ export default function CartModal ({ closeModal }) {
                         </li>
                     ))
                 )}
+                
                 <button className={styles.btn} onClick={()=>closeModal(false)}>
                     <div className={styles.btntext} >
                         前往結帳
